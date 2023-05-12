@@ -22,9 +22,10 @@ export const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
-    p,a,h2,button{
+    p,a,h2,h3,button{
         font-family: 'Rokkitt', serif;
         text-decoration: none;
+        margin-bottom: 0;
 
     }
 

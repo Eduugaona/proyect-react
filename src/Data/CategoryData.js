@@ -7,14 +7,14 @@ const CategoryData = [{
 }
 ,{
     id: 2,
-    nombre: 'cartel',
-    categoria: 'cartel',
+    nombre: 'Cartel',
+    categoria: 'Cartel',
 
 },
 {
     id: 3,
-    nombre: 'frases',
-    categoria: 'frases',
+    nombre: 'Frases',
+    categoria: 'Frases',
 
 }
 ]

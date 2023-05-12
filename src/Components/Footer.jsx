@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-
+import { Link } from 'react-router-dom';
 
 const FooterContainer = styled.footer`
     padding: 100px 20px;
@@ -51,10 +51,10 @@ export const Footer = () => {
        <FooterItems>
           <h2>Categorias</h2>
           <div>
-            <a href='/'>Nosotros</a>
-            <a href='/'>Nuestros Productos</a>
-            <a href='/'>Nuestros Clientes</a>
-            <a href='/'>Ofertas Especiales</a>
+            <Link to={"/"}>Home</Link>
+            <Link to={"/sobre-nosotros"}>Sobre Nosotros</Link>
+            <Link to={"/tienda"}>Tienda</Link>
+            <Link to={"/checkout"}>Check Out</Link>
           </div>
        </FooterItems>
        <FooterItems>

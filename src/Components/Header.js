@@ -1,11 +1,13 @@
-import {React, useState} from 'react'
+import {React} from 'react'
 import styled from 'styled-components'
 import { Logo } from './Logo'
 import { NavBar } from './NavBar'
 import { MdViewHeadline } from "react-icons/md";
 import { BsCart2 } from 'react-icons/bs';
 import CartToggleContainer from './CartToggleContainer';
-import { useDispatch } from 'react-redux';
+import  {toggleMenuOn} from '../redux/reducers/toggleMenuSlice'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { toggleCart } from '../redux/reducers/cartSlice'
 
 
@@ -64,9 +66,10 @@ const IconCart = styled(BsCart2)`
 
 export const Header = () => {
 
-  let [Menu, SetMenu] = useState(false);
-  const dispatch = useDispatch();
 
+    const dispatch = useDispatch()
+    const Menu = useSelector((state) => state.toggleMenu.toggleMenuOn)
+    console.log(Menu)
 
 
   return (
@@ -74,12 +77,10 @@ export const Header = () => {
       <Logo tamaño = {'100%'}/>
       
       <NavBarContainer>  
-          <HamburgerContainer onClick={ () => SetMenu(!Menu)}>
+          <HamburgerContainer onClick={ () => dispatch(toggleMenuOn(!Menu))}>
               <MdViewHeadline color='white' fontSize='40px'/>
           </HamburgerContainer>
-          <NavBar
-              ClickMenuOn={Menu}
-          />
+          <NavBar/>
           <CartIconContainer onClick={ () => dispatch(toggleCart(true))  }>
               <IconCart fontSize='30px' color='rgba(250,250,250,0.9)'/>
           </CartIconContainer>

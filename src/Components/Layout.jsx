@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { useLocation } from 'react-router-dom'
+
 const LayoutGeneral = styled.div`
   
     width: 100vw;
@@ -10,6 +12,11 @@ const LayoutGeneral = styled.div`
 `
 
 const Layout = ({children}) => {
+  const {pathname} = useLocation();
+  useEffect( () => {
+    window.scrollTo(0,0)
+  }, [pathname])
+
   return (
   
       <LayoutGeneral>

@@ -10,6 +10,9 @@ const CarouselStyled = styled(Carousel)`
     justify-content: center;
     align-items: center;
 
+    @media(max-width: 700px){
+      width: 90%;
+    }
 
     img{
         width: 100%;

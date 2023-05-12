@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { toggleCart, removeAllProduts } from '../redux/reducers/cartSlice'
 import { CartProductsRendered } from './CartProducts'
 import {AiOutlineClose} from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom'
 
 const CartContainer = styled.div`
   top: 0px;
@@ -26,7 +27,7 @@ const CartContainer = styled.div`
 
 `
 
-const CloseCartStyled = styled(AiOutlineClose)`
+export const CloseCartStyled = styled(AiOutlineClose)`
   cursor: pointer;
   color: #f1e9f1e7;
   font-size: 20px;
@@ -66,6 +67,8 @@ const PriceCartContainer = styled.div`
 
 const CartToggleContainer = () => {
 
+  const navigate = useNavigate()
+
   const togleCart = useSelector((state) => state.cart.toggleCartON)
   const productsInCart = useSelector((state) => state.cart.cartItems)
   const totalPrice = useSelector((state) => state.cart.totalCost)
@@ -74,7 +77,7 @@ const CartToggleContainer = () => {
 
   return (
     <CartContainer right = {togleCart}>
-      <CloseCartStyled onClick={ () => dispatch(toggleCart(!togleCart))}>cerrar</CloseCartStyled>
+      <CloseCartStyled onClick={ () => dispatch(toggleCart(!togleCart))}></CloseCartStyled>
       
         {productsInCart.length === 0 ? 
           <EmptyCartStyled>
@@ -89,7 +92,7 @@ const CartToggleContainer = () => {
             <p>${totalPrice}</p>
           </PriceCartContainer>
           <DeleteAllButton onClick={() => dispatch(removeAllProduts([]))}>VACIAR CARRITO</DeleteAllButton>
-          <button disabled >CONTINUAR COMPRA</button>
+          <button onClick={ () => navigate('/checkout')} >CONTINUAR COMPRA</button>
         </section>}
       
     </CartContainer>

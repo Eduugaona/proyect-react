@@ -5,7 +5,7 @@ import { selectedCategory } from '../redux/reducers/categoriesSlice';
 
 
 const CategoriesCard = styled.div`
-padding: 10px 5px;
+  padding: 10px 5px;
   border-radius: 20px;
   width: 200px;
   background-color:${({selected}) => selected ? 'black' : 'grey'  }; 
@@ -19,10 +19,20 @@ padding: 10px 5px;
 
 
   h2{
-    color:#fafa;
+    color:#f3ecf3aa;
     font-size: 30px;
   }
 
+  @media( max-width: 700px){
+    border-radius: 100%;
+    width: auto;
+    
+  
+
+  h2{
+    font-size: 20px;
+  }
+}
 `
 
 

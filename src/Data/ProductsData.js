@@ -18,14 +18,14 @@ export const ProductsData = [{
     id:1,
     image: Cartel1,
     description: 'Cartel Juntos es Mejor',
-    categoria:'frases',
+    categoria:'Frases',
     precio: 3000,
 },
 {
     id:2,
     image: Cartel2,
     description: 'Cartel Hot',
-    categoria: 'cartel',    
+    categoria: 'Cartel',    
     precio: 5500,
 },
 {
@@ -39,7 +39,7 @@ export const ProductsData = [{
     id:4,
     image: Cartel4,
     description: 'Cartel Chill Here',
-    categoria: 'cartel',
+    categoria: 'Cartel',
     precio: 3000,
 },
 
@@ -61,7 +61,7 @@ export const ProductsData = [{
     id:7,
     image: Cartel7,
     description: 'Cartel Pura Vida',
-    categoria: 'frases',
+    categoria: 'Frases',
     precio: 2100,
 },
 {
@@ -75,7 +75,7 @@ export const ProductsData = [{
     id:9,
     image: Cartel9,
     description: 'enjoy the silence',
-    categoria: 'frases',
+    categoria: 'Frases',
     precio: 8500,
 },
 {
@@ -96,14 +96,14 @@ export const ProductsData = [{
     id:12,
     image: Cartel12,
     description: 'Cartel Hello',
-    categoria: 'frases',
+    categoria: 'Frases',
     precio: 4500,
 },
 {
     id:13,
     image: Cartel13,
     description: 'Cartel Valen',
-    categoria: 'cartel',
+    categoria: 'Cartel',
     precio: 6500,
 },
 ]
